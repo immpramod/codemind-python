@@ -1,8 +1,8 @@
-t=int(input())
-while(t):
-    t-=1
+n=int(input())
+while(n):
+    n-=1
     a=int(input())
-    l=list(map(int,input().split()))
+    l=list(map(int,input().split()))[:a]
     if sorted(l)==l:
         print('0')
     else:
