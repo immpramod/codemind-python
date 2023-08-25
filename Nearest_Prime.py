@@ -1,24 +1,30 @@
-def prime(i):
-    if i==1:
-        return 0
+def prime(n):
     c=0
-    for j in range(2,(i//2)+1):
-        if i%j==0:
+    for i in range(1,n+1):
+        if(n%i==0):
             c+=1
-    if c==0:
-        return i
-n=int(input())
-for i in range(n):
-    m=int(input())
-    for i in range(m,0,-1):
-        if prime(i):
-            l=i
-            break
-    for i in range(m+1,m*m):
-        if prime(i):
-            k=i
-            break
-    if (k-m)>=(m-l):
-        print(l)
+    if(c==2):
+        return 1
     else:
-        print(k)
+        return 0
+h=int(input())
+while(h):
+    n=int(input())
+    for i in range(1,n+1):
+        if(prime(i)):
+            a=i
+    i=n+1
+    while(1):
+        if(prime(i)):
+            b=i
+            break
+        i+=1
+    x=abs(a-n)
+    y=abs(b-n)
+    if(x<y):
+        print(a)
+    elif(x==y):
+        print(a)
+    else:
+        print(b)
+    h-=1
